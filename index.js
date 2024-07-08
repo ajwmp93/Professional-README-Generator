@@ -12,9 +12,8 @@ const licenseOptions = [
     'BSD 3-Clause',
     'None'
 ]
-
-inquirer
-    .prompt ([
+function promptUser() {
+    return inquirer.prompt ([
         {
             type: 'input',
             message: 'Enter the name of your project:',
@@ -75,16 +74,25 @@ inquirer
             message: 'Enter your email address:',
             name: 'email',
         },
-    ])
+    ])};
+    
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fileName = `${data.projectName}`;
 
-    
-}
+    return fs.writeFile(fileName, data)
+        .then(() => console.log('README file created successfully.'))
+        .catch((err) => console.log(err));
+
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    promptUser()
+    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
+    .then(() => console.log('Added new README to README.md successfully.'))
+    .catch((err) => console.log*err);
+};
 
 // Function call to initialize app
 init();
