@@ -1,4 +1,4 @@
-# Professional-README-Generator
+# README
 
   ## Table of Contents
   - [Description] (#description)
@@ -10,13 +10,13 @@
   - [Questions] (#questions)
 
   ## Description
-  I created this project to quickly and easily create a README.md file from the terminal line
+  I created this project to quickly be able to create a README.md file from the terminal line rather than having to go in and format a file myself.
 
   ## Installation
   None
 
   ## Usage
-  In ther terminal, run node index.js and answer the prompts as they come up, once you finish, a README.md file will be created
+  When in the folder, in the terminal, write node index.js and answer the prompts as they come up. Once you have gone through and answered everything, a new file will be created.
 
   ## License
   None
